@@ -186,6 +186,7 @@ header nav a:hover {
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
+    padding-bottom: 50px;
     gap: 20px;
     
 }
@@ -234,7 +235,7 @@ header nav a:hover {
     position: absolute;
     border-radius: 50px;
     border: 2px solid #F85791;
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(0, 0, 0, 0.8);
     top: 0px;
     bottom: 0px;
     display: flex;
@@ -242,7 +243,7 @@ header nav a:hover {
     align-items: center;
     flex-direction: column;
     opacity: 0;
-    transition: 0,0s;
+    transition: 0.3s;
 }
 .carolina_overlay:hover {
     opacity: 1;
@@ -266,4 +267,126 @@ header nav a:hover {
 
 .quereme_overlay:hover{
     opacity: 1 ;
+}
+
+.carolina_overlay p, .cranch_overlay p, .bennu_overlay p, .electricidad_overlay p, .sunset_overlay p, .quereme_overlay p {
+    color: #D6E4EB;
+    width: 63%;
+    font-family: "Coda";
+    font-weight: 400;
+    font-size: 1em;
+
+}
+
+.carolina_overlay a, .cranch_overlay a, .bennu_overlay a, .electricidad_overlay a, .sunset_overlay a, .quereme_overlay a {
+    color: #D6E4EB;
+    width: 60%;
+    align-self: flex-start;
+    padding-left: 20%;
+    padding-top: 10px;
+    text-decoration: none;
+    font-family: "Coda";
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.estudios_habilidades {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 13%;
+}
+
+.estudios, .habilidades {
+    border: 2px solid #F85791;
+    border-radius: 50px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.estudios h3, .habilidades h3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F85791;
+    padding: 25px 0px;
+    border-radius: 50px 50px 0px 0px;
+    align-self: center;
+    border: 2px solid #F85791;
+    font-family: 'ClashDisplay-Bold';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    font-size: 2em;
+    color: #D6E4EB;
+}
+
+.estudios ul, .habilidades ul {
+    padding: 35px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.estudios li {
+    padding: 0px 30px;
+    color: #D6E4EB;
+    font-family: "Coda";
+    font-weight: 400;
+    font-size: 1em;
+    list-style-type: none;
+}
+
+.estudios_negrita{
+    font-family: 'ClashDisplay-Regular';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+.habilidades li {
+    padding: 0px 30px;
+    color: #D6E4EB;
+    font-family: "Coda";
+    font-weight: 400;
+    font-size: 1em;
+    list-style-type: none;
+}
+
+footer {
+    background-color: #1A1C24;
+    border-top: 2px solid #F85791;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 10px;
+    padding: 20px;
+}
+
+footer ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+footer ul li a {
+    color: #D6E4EB;
+    font-family: 'ClashDisplay-Regular';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-size: 0.8em;
+    padding-left: 8px;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #1A3BAE;
 }
