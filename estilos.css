@@ -432,7 +432,7 @@ footer ul li a:hover {
 .poster {
     display: flex;
     justify-content: center;
-    padding-bottom: 60px;
+    padding-bottom: 26px;
 }
 
 .imagenes_poster {
@@ -449,6 +449,28 @@ footer ul li a:hover {
 
 .poster img:hover {
     transform: scale(104%);
+}
+
+.video_section {
+    display: flex;
+    justify-content: center;
+}
+.videos {
+    width: 78%;
+    margin-bottom: 80px;
+}
+
+.videos video {
+    margin: 5px;
+    border: 2px solid #F85791;
+    border-radius: 50px;
+}
+
+
+@media (max-width: 1900px) {
+    .video_dispensable {
+        display: none;
+    }
 }
 
 /*identidades*/
