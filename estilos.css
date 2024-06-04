@@ -73,6 +73,16 @@ header nav a:hover {
     left: 93%;
 }
 
+.logo_rosa {
+    position: relative;
+}
+
+.logo_rosa:hover {
+    transform: scale(114%);
+    transition: 0.2s ;
+}
+
+
 /*section del nombre */
 
 .yanina_carlomagno {
@@ -131,7 +141,7 @@ header nav a:hover {
 
 
 .sobremi_barra_superior  {
-    height: 30px;
+    height: 20px;
     width: 100%;
     background-color: #F85791;
     position: relative;
@@ -393,7 +403,7 @@ footer ul li a:hover {
 
 /* pagina ilustraciones */
 
-.ilustraciones_section {
+.ilustraciones_section, .identidades_section  {
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -401,21 +411,22 @@ footer ul li a:hover {
     align-items: center;
 }
 
-.ilus {
+.ilus, .identidades {
     font-family: "ClashDisplay-Bold" ;
     font-weight: 700;
     -webkit-text-stroke: 2px #F85791;
     font-size: 8em;
     color: transparent;
+    padding-top: 10%;
 }
 
-.afiches_digitales {
+.afiches_digitales, .visuales {
     font-family: "ClashDisplay-Bold" ;
     font-weight: 700;
     font-size: 7em;
     color: #F85791;
-    position: absolute;
-    bottom: 36vh;
+    position: relative;
+    bottom: 52px;
 }
 
 .poster {
@@ -425,19 +436,201 @@ footer ul li a:hover {
 }
 
 .imagenes_poster {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    grid-gap: 20px
+    width: 78%;
+    display: -ms-inline-grid;
 }
 
 .imagenes_poster img {
     transition: transform 0.3s ease;
     border-radius: 50px;
     border: 2px solid #F85791;
+    margin: 10px;
 }
 
 .poster img:hover {
     transform: scale(104%);
+}
+
+/*identidades*/
+
+.carrusel_bennu {
+    width: 449px;
+    height: 527px;
+    animation: carrusel_bennu 28s ease-in-out 0.3s infinite;
+    background-image: url(img/identidades/bennu/buzo_blanco.jpg);
+    border: 2px solid #F85791;
+    border-radius: 50px;
+}
+
+@keyframes carrusel_bennu {
+    12% {background-image: url(img/identidades/bennu/buzo_blanco.jpg);}
+
+    14% { background-image: url(img/identidades/bennu/buzo_verde.jpg); }
+    26% {background-image: url(img/identidades/bennu/buzo_verde.jpg);}
+
+    28% { background-image: url(img/identidades/bennu/goma.jpg) ; }
+    40% { background-image: url(img/identidades/bennu/goma.jpg) ; }
+
+    42% { background-image: url(img/identidades/bennu/remera_merch.jpg);}
+    54% { background-image: url(img/identidades/bennu/remera_merch.jpg);}
+
+    56% { background-image: url(img/identidades/bennu/remera_staff.jpg);}
+    68% { background-image: url(img/identidades/bennu/remera_staff.jpg);}
+
+    70% {background-image: url(img/identidades/bennu/totebag.jpg);}
+    82% {background-image: url(img/identidades/bennu/totebag.jpg);}
+
+    84% { background-image: url(img/identidades/bennu/zapatillas.jpg); }
+    94% { background-image: url(img/identidades/bennu/zapatillas.jpg); }
+}
+
+.marcador_bennu {
+    margin-top: 18px;
+    width: 449px;
+    height: 12.5px;
+    background-image: url(img/identidades/bennu/indicador_carrusel-08.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: marcador_bennu 28s ease-in-out 0.3s infinite;
+}
+
+@keyframes marcador_bennu {
+    12% {background-image: url(img/identidades/bennu/indicador_carrusel-08.svg);}
+
+    14% { background-image: url(img/identidades/bennu/indicador_carrusel-09.svg); }
+    26% {background-image: url(img/identidades/bennu/indicador_carrusel-09.svg);}
+
+    28% { background-image: url(img/identidades/bennu/indicador_carrusel-10.svg) ; }
+    40% { background-image: url(img/identidades/bennu/indicador_carrusel-10.svg) ; }
+
+    42% { background-image: url(img/identidades/bennu/indicador_carrusel-11.svg);}
+    54% { background-image: url(img/identidades/bennu/indicador_carrusel-11.svg);}
+
+    56% { background-image: url(img/identidades/bennu/indicador_carrusel-12.svg);}
+    68% { background-image: url(img/identidades/bennu/indicador_carrusel-12.svg);}
+
+    70% {background-image: url(img/identidades/bennu/indicador_carrusel-13.svg);}
+    82% {background-image: url(img/identidades/bennu/indicador_carrusel-13.svg);}
+
+    84% { background-image: url(img/identidades/bennu/indicador_carrusel-14.svg); }
+    94% { background-image: url(img/identidades/bennu/indicador_carrusel-14.svg); }
+}
+
+.fotos_bennu, .fotos_fm, .fotos_cranch {
+    display: flex;
+    gap: 10px;
+}
+
+.afiches_bennu, .papas_comunes {
+    border: 2px solid #F85791;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.bennu, .cranch {
+    display: flex;
+    gap: 1%;
+    margin-bottom: 60px;
+}
+
+.fm {
+    display: flex;
+    gap: 1%;
+    margin-bottom: 60px;
+    justify-content: flex-end;
+}
+
+.info_bennu, .info_fm, .info_cranch {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 33px;
+    gap: 25px;
+}
+
+.info_bennu h3, .info_fm h3, .info_cranch h3{
+    align-self: flex-start;
+    color: #D6E4EB  ;
+    font-family: "ClashDisplay-bold";
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+.info_bennu div, .info_fm div, .info_cranch div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info_bennu p, .info_fm p, .info_cranch p {
+    color: #D6E4EB;
+    font-family: "Coda";
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.info_bennu a, .info_fm a {
+    color: #D6E4EB;
+    font-family: "Coda";
+    font-weight: 700;
+    font-size: 1em;
+    align-self: flex-start;
+    text-decoration: none;
+}
+
+.barra_uno_identidades {
+    height: 20px;
+    width: 100%;
+    background-color: #F85791;
+    margin: 90px 0px;
+}
+
+.carrusel_fm {
+    width: 314px;
+    height: 426px;
+    background-image: url(img/identidades/fm/remera_blanca_fm.jpg);
+    animation: carrusel_fm 10s ease-in-out 0.3s infinite;
+    border: 2px solid #F85791;
+    border-radius: 50px;
+}
+
+@keyframes carrusel_fm {
+    30% {background-image: url(img/identidades/fm/remera_blanca_fm.jpg);}
+
+    33% {background-image: url(img/identidades/fm/remera_dos_blanca.jpg);}
+    63% {background-image: url(img/identidades/fm/remera_dos_blanca.jpg);}
+
+    66% {background-image: url(img/identidades/fm/remera_negra_fm.jpg);}
+    96% {background-image: url(img/identidades/fm/remera_negra_fm.jpg);}
+}
+
+.indicador_fm_carrusel {
+    margin-top: 18px;
+    width: 314px;
+    height: 12.5px;
+    background-image: url(img/identidades/fm/indicadores\ de\ carrusel-15.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: indicador_fm 10s ease-in-out 0.3s infinite;
+}
+
+@keyframes indicador_fm {
+    30% {background-image: url(img/identidades/fm/indicadores\ de\ carrusel-15.svg);}
+
+    33% {background-image: url(img/identidades/fm/indicadores\ de\ carrusel-16.svg);}
+    63% {background-image: url(img/identidades/fm/indicadores\ de\ carrusel-16.svg);}
+
+    66% {background-image: url(img/identidades/fm/indicadores\ de\ carrusel-17.svg);}
+    96% {background-image: url(img/identidades/fm/indicadores\ de\ carrusel-17.svg);}
+}
+
+.fotos_fm img {
+    border: 2px solid #F85791;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.papas_picantes {
+    border: 2px solid #F85791;
+    border-radius: 50px;
 }
 
