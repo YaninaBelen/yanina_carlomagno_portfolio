@@ -23,6 +23,13 @@
     padding: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     background-image: url(img/textura_fondo.jpg);
     background-size: contain;
@@ -46,9 +53,21 @@ header nav {
     width: 45%;
     height: 100%;
     padding: 15px 0px 15px 0px;
+    
+}
+
+header ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header ul li {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header nav a {
@@ -61,11 +80,13 @@ header nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     
 }
 
 header nav a:hover {
-    color: #1A3BAE;
+    border: 2px solid #F85791;
+    border-radius: 15px;
 }
 
 .casita {
@@ -78,8 +99,9 @@ header nav a:hover {
 }
 
 .logo_rosa:hover {
-    transform: scale(114%);
-    transition: 0.2s ;
+    transform: scale(110%);
+    transition: 0.1s ;
+    border: none;
 }
 
 
@@ -150,15 +172,14 @@ header nav a:hover {
 
 .sobre_mi {
     height: auto;
+    width: 68%;
     display: flex;
     justify-content: space-between;
-    padding: 0% 13%;
     align-items: center;
-    gap: 50px;
 
 }
 .info_sobremi {
-    width: 30%;
+    width: 40%;
 }
 
 .info_sobremi h3 {
@@ -192,6 +213,7 @@ header nav a:hover {
 }
 
 .experiencia {
+    width: 68%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,7 +225,6 @@ header nav a:hover {
 
 .experiencia h3 {
     align-self: flex-start;
-    padding-left: 13%;
     padding-top: 30px;
     color: #D6E4EB  ;
     font-family: "ClashDisplay-bold";
@@ -213,7 +234,7 @@ header nav a:hover {
 }
 
 .scroll_experiencia {
-    width: 74%;
+    width: 100%;
     display: flex;
     overflow-x: scroll;
     gap: 20px;
@@ -221,14 +242,14 @@ header nav a:hover {
     padding-bottom: 20px;
 
 }
-.scroll_experiencia::-webkit-scrollbar{
+.scroll_experiencia::-webkit-scrollbar, .sunset_scroll::-webkit-scrollbar, .scroll_secretos::-webkit-scrollbar {
     background: #F85791;
     border-radius: 20px;
     height: 20px;
     
 }
 
-.scroll_experiencia::-webkit-scrollbar-thumb {
+.scroll_experiencia::-webkit-scrollbar-thumb, .sunset_scroll::-webkit-scrollbar-thumb, .scroll_secretos::-webkit-scrollbar-thumb  {
     background: #1A3BAE;
     border-radius: 20px;
 }
@@ -307,8 +328,6 @@ header nav a:hover {
 }
 
 .estudios, .habilidades {
-    border: 2px solid #F85791;
-    border-radius: 50px;
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -322,7 +341,6 @@ header nav a:hover {
     padding: 25px 0px;
     border-radius: 50px 50px 0px 0px;
     align-self: center;
-    border: 2px solid #F85791;
     font-family: 'ClashDisplay-Bold';
     font-weight: 700;
     font-display: swap;
@@ -331,20 +349,39 @@ header nav a:hover {
     color: #D6E4EB;
 }
 
-.estudios ul, .habilidades ul {
-    padding: 35px 45px;
+.estudios ul{
+    height: 264px;
+    border-radius: 0px 0px 50px 50px;
+    border: 2px solid #F85791;
+    padding: 35px 70px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.estudios li {
-    padding: 0px 30px;
+.listas_habilidades {
+    height: 264px;
+    border-radius: 0px 0px 50px 50px;
+    border: 2px solid #F85791;
+    padding: 35px 70px;
+    display: flex;
+    gap: 40px;
+}
+
+.listas_habilidades ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.estudios li, .habilidades li {
+    padding: 0px 30px 0px 10px;
     color: #D6E4EB;
     font-family: "Coda";
     font-weight: 400;
     font-size: 1em;
-    list-style-type: none;
+    list-style-type: "✤";
 }
 
 .estudios_negrita{
@@ -355,16 +392,11 @@ header nav a:hover {
     font-size: 1.1em;
 }
 
-.habilidades li {
-    padding: 0px 30px;
-    color: #D6E4EB;
-    font-family: "Coda";
-    font-weight: 400;
-    font-size: 1em;
-    list-style-type: none;
-}
+/*footer*/
 
 footer {
+    width: 100%;
+    height: 79px;
     background-color: #1A1C24;
     border-top: 2px solid #F85791;
     display: flex;
@@ -372,18 +404,19 @@ footer {
 }
 
 footer ul {
+    width: 75%;
     display: flex;
-    justify-content: center;
-    width: 80%;
-    gap: 10px;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer ul li {
-    padding: 10px;
+    
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    height: 20px;
+    width: 220px;
 }
 
 footer ul li a {
@@ -397,13 +430,20 @@ footer ul li a {
     text-decoration: none;
 }
 
-footer ul li a:hover {
-    color: #1A3BAE;
+footer ul li div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+footer ul li div:hover {
+    border: 2px solid #F85791;
+    border-radius: 15px;
 }
 
 /* pagina ilustraciones */
 
-.ilustraciones_section, .identidades_section  {
+.ilustraciones_section, .identidades_section, .editoriales_section{
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -411,7 +451,7 @@ footer ul li a:hover {
     align-items: center;
 }
 
-.ilus, .identidades {
+.ilus, .identidades, .proyectos  {
     font-family: "ClashDisplay-Bold" ;
     font-weight: 700;
     -webkit-text-stroke: 2px #F85791;
@@ -420,7 +460,7 @@ footer ul li a:hover {
     padding-top: 10%;
 }
 
-.afiches_digitales, .visuales {
+.afiches_digitales, .visuales, .editoriales {
     font-family: "ClashDisplay-Bold" ;
     font-weight: 700;
     font-size: 7em;
@@ -436,8 +476,8 @@ footer ul li a:hover {
 }
 
 .imagenes_poster {
-    width: 78%;
-    display: -ms-inline-grid;
+    display: grid;
+    grid-template: 511px 511px 511px/ 25% 25% 25% 25% ;
 }
 
 .imagenes_poster img {
@@ -448,7 +488,7 @@ footer ul li a:hover {
 }
 
 .poster img:hover {
-    transform: scale(104%);
+    transform: scale(108%);
 }
 
 .video_section {
@@ -456,8 +496,10 @@ footer ul li a:hover {
     justify-content: center;
 }
 .videos {
-    width: 78%;
-    margin-bottom: 80px;
+    display: grid;
+    grid-template: 860px / 33% 33% 33%;
+    gap: 10px;
+    padding-bottom: 30px;
 }
 
 .videos video {
@@ -466,19 +508,27 @@ footer ul li a:hover {
     border-radius: 50px;
 }
 
+@media screen and (max-width: 1537px) {
 
-@media (max-width: 1900px) {
+    .imagenes_poster {
+        display: grid;
+        grid-template: 511px 511px 511px/ 33% 33% 33% ;
+    }
+    .videos {
+        display: grid;
+        grid-template: 860px / 50% 50%;
+    }
     .video_dispensable {
         display: none;
     }
+    
 }
-
 /*identidades*/
 
 .carrusel_bennu {
     width: 449px;
     height: 527px;
-    animation: carrusel_bennu 28s ease-in-out 0.3s infinite;
+    animation: carrusel_bennu 25s ease-in-out 0.3s infinite;
     background-image: url(img/identidades/bennu/buzo_blanco.jpg);
     border: 2px solid #F85791;
     border-radius: 50px;
@@ -513,7 +563,7 @@ footer ul li a:hover {
     background-image: url(img/identidades/bennu/indicador_carrusel-08.svg);
     background-position: center;
     background-repeat: no-repeat;
-    animation: marcador_bennu 28s ease-in-out 0.3s infinite;
+    animation: marcador_bennu 25s ease-in-out 0.3s infinite;
 }
 
 @keyframes marcador_bennu {
@@ -540,28 +590,25 @@ footer ul li a:hover {
 
 .fotos_bennu, .fotos_fm, .fotos_cranch {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
-.afiches_bennu, .papas_comunes {
+.afiches_bennu, .papas_comunes, .fotos_fm img, .info_img_sunset img, .sunset_scroll img, .fotos_secretos img, .info_img_secretos img {
     border: 2px solid #F85791;
-    border-radius: 0px 50px 50px 0px;
+    border-radius: 50px 50px;
+    margin: 0px 5px ;
 }
 
-.bennu, .cranch {
+.bennu, .cranch, .secretos, .fm, .aleksandra {
+    width: 78%;
     display: flex;
+    justify-content: center;
     gap: 1%;
     margin-bottom: 60px;
 }
 
-.fm {
-    display: flex;
-    gap: 1%;
-    margin-bottom: 60px;
-    justify-content: flex-end;
-}
 
-.info_bennu, .info_fm, .info_cranch {
+.info_bennu, .info_fm, .info_cranch, .info_sunset, .info_secretos, .info_aleksandra {
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -570,7 +617,7 @@ footer ul li a:hover {
     gap: 25px;
 }
 
-.info_bennu h3, .info_fm h3, .info_cranch h3{
+.info_bennu h3, .info_fm h3, .info_cranch h3, .info_sunset h3, .info_secretos h3, .info_aleksandra h3 {
     align-self: flex-start;
     color: #D6E4EB  ;
     font-family: "ClashDisplay-bold";
@@ -578,20 +625,20 @@ footer ul li a:hover {
     font-size: 2em;
     letter-spacing: 1px;
 }
-.info_bennu div, .info_fm div, .info_cranch div {
+.info_bennu div, .info_fm div, .info_cranch div,  .info_sunset div, .info_secretos div, .info_aleksandra div {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.info_bennu p, .info_fm p, .info_cranch p {
+.info_bennu p, .info_fm p, .info_cranch p,  .info_sunset p, .info_secretos p, .info_aleksandra p {
     color: #D6E4EB;
     font-family: "Coda";
     font-weight: 400;
     font-size: 1em;
 }
 
-.info_bennu a, .info_fm a {
+.info_bennu a, .info_fm a,  .info_sunset a, .info_aleksandra a {
     color: #D6E4EB;
     font-family: "Coda";
     font-weight: 700;
@@ -646,13 +693,95 @@ footer ul li a:hover {
     96% {background-image: url(img/identidades/fm/indicadores\ de\ carrusel-17.svg);}
 }
 
-.fotos_fm img {
-    border: 2px solid #F85791;
-    border-radius: 50px 0px 0px 50px;
-}
-
 .papas_picantes {
     border: 2px solid #F85791;
     border-radius: 50px;
 }
 
+/* editoriales */
+
+.sunset, .secretos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_img_sunset, .info_img_secretos {
+    width: 78%;
+    display: flex;
+    justify-content: center;
+}
+
+.sunset_scroll_espacio {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+
+.fotos_secretos {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 20px;
+}
+
+.sunset_scroll, .scroll_secretos {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 20px; 
+}
+
+.carrusel_aleksandra {
+    width: 1011px;
+    height: 644px;
+    background-image: url(img/editorial/aleksandra_ekster/tapa_contratapa_aleksandra.jpg);
+    animation: carrusel_aleksandra 25s ease-in-out 0.3s infinite;
+    border: 2px solid #F85791;
+    border-radius: 50px;
+}
+
+@keyframes carrusel_aleksandra {
+    12% {background-image: url(img/editorial/aleksandra_ekster/tapa_contratapa_aleksandra.jpg);}
+
+    14% {background-image: url(img/editorial/aleksandra_ekster/glosario_aleksandra.jpg);}
+    26% {background-image: url(img/editorial/aleksandra_ekster/glosario_aleksandra.jpg);}
+
+    28% {background-image: url(img/editorial/aleksandra_ekster/imagenes_aleksandra.jpg);}
+    40% {background-image: url(img/editorial/aleksandra_ekster/imagenes_aleksandra.jpg);}
+
+    42% {background-image: url(img/editorial/aleksandra_ekster/indice_aaleksandra.jpg);}
+    55% {background-image: url(img/editorial/aleksandra_ekster/indice_aaleksandra.jpg);}
+
+    56% {background-image: url(img/editorial/aleksandra_ekster/portadilla_aleksandra.jpg);}
+    68% {background-image: url(img/editorial/aleksandra_ekster/portadilla_aleksandra.jpg);}
+
+    70% {background-image: url(img/editorial/aleksandra_ekster/vanguardia_rusa.jpg);} 
+    82% {background-image: url(img/editorial/aleksandra_ekster/vanguardia_rusa.jpg);} 
+
+    84% {background-image: url(img/editorial/aleksandra_ekster/linea_tiempo.jpg);} 
+    94% {background-image: url(img/editorial/aleksandra_ekster/linea_tiempo.jpg);} 
+
+}
+
+.indicador_aleksandra {
+    margin-top: 18px;
+    width: 1011px;
+    height: 12.5px;
+    background-image: url(img/identidades/bennu/indicador_carrusel-08.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: marcador_bennu 25s ease-in-out 0.3s infinite;
+}
