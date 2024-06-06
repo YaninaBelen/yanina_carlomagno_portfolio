@@ -51,7 +51,6 @@ header {
 
 header nav {
     width: 45%;
-    height: 100%;
     padding: 15px 0px 15px 0px;
     
 }
@@ -73,7 +72,6 @@ header ul li {
 header nav a {
     color:#D6E4EB ;
     font-family: "ClashDisplay-Regular";
-    font-weight: 400;
     font-size: 1.2em;
     text-decoration: none;
     letter-spacing: 0.5px;
@@ -118,8 +116,6 @@ header nav a:hover {
 
 .yanina_carlomagno h2 {
     font-family: "ClashDisplay-Bold" ;
-    font-weight: 700;
-    font-size: 4em;
     -webkit-text-stroke: 2px #F85791;
     font-size: 12em;
     color: transparent;
@@ -127,8 +123,6 @@ header nav a:hover {
 
 .yanina_carlomagno h1 {
     font-family: "ClashDisplay-Bold" ;
-    font-weight: 700;
-    font-size: 4em;
     color: #F85791;
     font-size: 10em;
     position: relative;
@@ -171,7 +165,6 @@ header nav a:hover {
 }
 
 .sobre_mi {
-    height: auto;
     width: 68%;
     display: flex;
     justify-content: space-between;
@@ -183,9 +176,7 @@ header nav a:hover {
 }
 
 .info_sobremi h3 {
-    color: #D6E4EB;
     font-family: "ClashDisplay-bold";
-    font-weight: 700;
     font-size: 2em;
     letter-spacing: 1px;
 }
@@ -193,8 +184,6 @@ header nav a:hover {
 .info_sobremi {
     color: #D6E4EB;
     font-family: "Coda";
-    font-weight: 400;
-    font-size: 1em;
 }
 
 
@@ -325,7 +314,7 @@ header nav a:hover {
     width: 68%;
     display: flex;
     justify-content: space-between;
-    padding: 50px 13%;
+    padding: 50px
 }
 
 .estudios, .habilidades {
@@ -380,16 +369,11 @@ header nav a:hover {
     padding: 0px 30px 0px 10px;
     color: #D6E4EB;
     font-family: "Coda";
-    font-weight: 400;
-    font-size: 1em;
     list-style-type: "✤";
 }
 
 .estudios_negrita{
     font-family: 'ClashDisplay-Regular';
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
     font-size: 1.1em;
     letter-spacing: 1.5px;
 }
@@ -406,7 +390,6 @@ footer {
 }
 
 footer ul {
-    width: 75%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -455,7 +438,6 @@ footer ul li div:hover {
 
 .ilus, .identidades, .proyectos  {
     font-family: "ClashDisplay-Bold" ;
-    font-weight: 700;
     -webkit-text-stroke: 2px #F85791;
     font-size: 8em;
     color: transparent;
@@ -464,7 +446,6 @@ footer ul li div:hover {
 
 .afiches_digitales, .visuales, .editoriales {
     font-family: "ClashDisplay-Bold" ;
-    font-weight: 700;
     font-size: 7em;
     color: #F85791;
     position: relative;
@@ -605,7 +586,6 @@ footer ul li div:hover {
     width: 78%;
     display: flex;
     justify-content: center;
-    gap: 1%;
     margin-bottom: 60px;
 }
 
