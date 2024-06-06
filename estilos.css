@@ -322,6 +322,7 @@ header nav a:hover {
 }
 
 .estudios_habilidades {
+    width: 68%;
     display: flex;
     justify-content: space-between;
     padding: 50px 13%;
@@ -390,6 +391,7 @@ header nav a:hover {
     font-display: swap;
     font-style: normal;
     font-size: 1.1em;
+    letter-spacing: 1.5px;
 }
 
 /*footer*/
