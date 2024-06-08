@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactame</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="ilustraciones.html">Ilustraciones</a></li>
+                <li><a href="identidades.html">Identidades</a></li>
+                <li><a href="index.html" class="logo_rosa" ><img src="img/logo_rosa.svg" alt="monograma inicio" width="71px" height="61px"></a></li>
+                <li><a href="editoriales.html">Editorial</a></li>
+                <li><a href="contactame.html">Contactame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contactame_section">
+            <h2 class="trabajemos">TRABAJEMOS</h2>
+            <h2 class="juntos">JUNTOS</h2>
+        </section>
+        <section class="formulario">
+            <form action="mailto:yaninabelen382@gmail.com" method="post" target="_blank" enctype="text/plain">
+                <div class="flor_animacion_form"></div>
+                <div class="form_completo">
+                    <div class="nombre_apellido">
+                        <div class="label_nombre">
+
+                            <label for="nombre">Nombre</label> 
+                            <input type="text" name="nombre" id="nombre" required>
+
+                        </div>
+                        <div class="label_apellido">
+
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" id="apellido" required>
+                        </div>
+                    </div>
+                    <div class="label_mail">
+
+                        <label for="mail">Mail</label>
+                        <input type="email" name="mail" id="mail" required>
+
+                    </div>
+                    <div class="label_telefono">
+
+                        <label for="telefono">Telefono</label>
+                        <input type="number" name="telefono" id="telefono" placeholder="(+54) 0000 0000" required>
+
+                    </div>
+
+                    <div class="label_descripcion">
+
+                        <label for="descripcion">Descripción de trabajo a solicitar</label>
+                        <textarea name="descripcion" id="descripcion"></textarea>
+
+                    </div>
+                    <div class="enviar_div">
+                        <input class="enviar" type="submit" value="Enviar" formenctype="text/plain">
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <ul>
+            <li>
+                <div> <!--Este div parece que esta re demás pero lo utilice para darle li un ancho fijo para a este div agregarle un hover de borde y evitar que no se muevan todos al pasar el mouse-->
+                    <img src="img/whatsapp.svg" alt="iconowpp" height="21px" width="21px">
+                    <a href="https://wa.me/+5438609961" target="_blank">+54 38609961</a>
+                </div>
+            </li>
+            <li>
+                 <div>
+                    <img src="img/linkedin.svg" alt="iconoln" height="21px" width="21px">
+                    <a href="www.linkedin.com/in/yanina-belén-carlomagno-717bb4212" target="_blank" >Yanina Belén Carlomagno</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/behance.svg" alt="iconobe" height="21px" width="21px">
+                    <a href="https://www.behance.net/yaninabeln" target="_blank" >Yanina Belén</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/instagram.svg" alt="iconoig" width="21px" height="21px">
+                    <a href="https://www.instagram.com/yanus_belen/" target="_blank" >yanus_belen</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="img/email.svg" alt="icono mail" height="21px" width="21px">
+                    <a href="mailto:yaninabelen382@gmail.com" target="_blank" >yaninabelen382@gmail.com</a>
+                </div>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

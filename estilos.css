@@ -32,8 +32,8 @@ main {
 
 body {
     background-image: url(img/textura_fondo.jpg);
-    background-size: contain;
-    background-repeat: repeat-y;
+    background-repeat: repeat;
+    
 }
 
 /*header*/
@@ -50,7 +50,7 @@ header {
 }
 
 header nav {
-    width: 45%;
+    width: 52%;
     padding: 15px 0px 15px 0px;
     
 }
@@ -109,7 +109,7 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 83px;
     justify-content: center;
     height: 90vh;
 }
@@ -129,28 +129,71 @@ header nav a:hover {
     bottom: 80px
 }
 
+.flor_responsive {
+    display: none;
+    height: 57px ;
+    width: 57px;
+    background-image: url(img/flores-18.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: flor 1.5s infinite;
+}
+
 .presentacion img {
     position: absolute;
 }
 
-
-.navegador_index {
-    align-self: flex-end;
-    background-color: #F85791;
-    border-radius: 12px;
-    padding: 27px 25px;
+.flores {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-right: 2%;
-  }
+    position: relative;
+    bottom: 325px;
+}
 
-.navegador_index a {
-    text-align: center;
-    color: #D6E4EB;
-    font-family: "ClashDisplay-Regular";
-    font-weight: 400;
-    text-decoration: none;
+.flor_animacion_izq {
+    height: 150px;
+    width: 150px;
+    background-image: url(img/flores-18.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 50%;
+    right: 419px;
+    animation: flor 1.5s infinite;
+}
+
+.flor_animacion_der {
+    height: 150px;
+    width: 150px;
+    background-image: url(img/flores-18.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 50%;
+    left: 419px;
+    animation: flor 1.5s infinite;
+}
+
+.flor_animacion_form {
+    height: 150px;
+    width: 150px;
+    background-image: url(img/flores-18.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-right: 100px;
+    animation: flor 1.5s infinite;
+}
+
+@keyframes flor {
+    24% {background-image: url(img/flores-18.svg);}
+
+    25% {background-image: url(img/flores-20.svg);}
+    49% {background-image: url(img/flores-20.svg);}
+
+    50% {background-image: url(img/flores-19.svg)}
+    74% {background-image: url(img/flores-19.svg);}
+
+    75% {background-image: url(img/flores-21.svg);}
+    100% {background-image: url(img/flores-21.svg);}
 }
 
 /*sobre mí*/
@@ -165,10 +208,12 @@ header nav a:hover {
 }
 
 .sobre_mi {
+    z-index: 50;
     width: 68%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1%;
 
 }
 .info_sobremi {
@@ -187,14 +232,18 @@ header nav a:hover {
 }
 
 
-.sobre_mi img {
+.foto_perfil{
     border-radius: 30px;
     border: solid 2px  #F85791;
     z-index: 80;
 }
 
+.foto_responsive {
+    display: none;
+}
+
 .sobremi_barra_inferior {
-    height: 30px;
+    height: 20px;
     width: 100%;
     background-color: #F85791;
     position: relative;
@@ -428,7 +477,7 @@ footer ul li div:hover {
 
 /* pagina ilustraciones */
 
-.ilustraciones_section, .identidades_section, .editoriales_section{
+.ilustraciones_section, .identidades_section, .editoriales_section, .contactame_section{
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -436,7 +485,7 @@ footer ul li div:hover {
     align-items: center;
 }
 
-.ilus, .identidades, .proyectos  {
+.ilus, .identidades, .proyectos, .trabajemos  {
     font-family: "ClashDisplay-Bold" ;
     -webkit-text-stroke: 2px #F85791;
     font-size: 8em;
@@ -444,7 +493,7 @@ footer ul li div:hover {
     padding-top: 10%;
 }
 
-.afiches_digitales, .visuales, .editoriales {
+.afiches_digitales, .visuales, .editoriales, .juntos {
     font-family: "ClashDisplay-Bold" ;
     font-size: 7em;
     color: #F85791;
@@ -491,21 +540,7 @@ footer ul li div:hover {
     border-radius: 50px;
 }
 
-@media screen and (max-width: 1537px) {
 
-    .imagenes_poster {
-        display: grid;
-        grid-template: 511px 511px 511px/ 33% 33% 33% ;
-    }
-    .videos {
-        display: grid;
-        grid-template: 860px / 50% 50%;
-    }
-    .video_dispensable {
-        display: none;
-    }
-    
-}
 /*identidades*/
 
 .carrusel_bennu {
@@ -679,7 +714,6 @@ footer ul li div:hover {
     border: 2px solid #F85791;
     border-radius: 50px;
 }
-
 /* editoriales */
 
 .sunset, .secretos {
@@ -766,4 +800,211 @@ footer ul li div:hover {
     background-position: center;
     background-repeat: no-repeat;
     animation: marcador_bennu 25s ease-in-out 0.3s infinite;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+.formulario form {
+    border-radius: 50px;
+    border: 2px solid #F85791;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 60px;
+}
+
+.form_completo input, textarea {
+    height: 25px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    border: none;
+}
+
+.enviar {
+    background-color: transparent;
+    font-family: 'ClashDisplay-Bold';
+    font-size: 1.3em;
+    color: #D6E4EB;
+}
+
+.enviar:hover {
+    color: #1A3BAE;
+}
+
+.enviar_div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form_completo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+ .label_mail, .label_telefono, .label_descripcion, .label_nombre, .label_apellido {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.label_nombre, .label_apellido {
+    width: 50%;
+}
+
+.label_descripcion textarea {
+    height: 50px;
+}
+
+.nombre_apellido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.form_completo div label {
+    font-family: "Coda";
+    font-weight: 400;
+    color: #D6E4EB;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .imagenes_poster {
+        display: grid;
+        grid-template: 511px 511px 511px/ 33% 33% 33% ;
+    }
+    .videos {
+        display: grid;
+        grid-template: 860px / 50% 50%;
+    }
+    .video_dispensable {
+        display: none;
+    }
+    
+    
+    .bennu, .cranch, .aleksandra, .info_img_sunset {
+        flex-direction:column-reverse;
+        width: 73%;
+    }
+    
+
+    .fm{
+        flex-direction: column;
+        width: 73%;
+    }
+
+    .info_img_secretos, .secretos {
+        flex-direction: column;
+    }
+
+    .fotos_bennu, .fotos_fm, .fotos_cranch {
+        justify-content: flex-start;
+        
+    }
+
+    .sunset_scroll_espacio {
+        width: 73%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    
+
+    header nav {
+        display: none;
+    }
+
+    .yanina_carlomagno {
+        height: 50vh;
+    }
+
+    .yanina_carlomagno h2 {
+        font-family: "ClashDisplay-Bold";
+        font-size: 5em;
+    }
+    .yanina_carlomagno h1 {
+        font-size: 3.5em;
+        position: relative;
+        bottom: 31px;
+    }
+
+    .flores {
+        display: none;
+    }
+
+    .flor_responsive {
+        display: flex;
+        position: relative;
+        bottom: 36px;
+    }
+
+    .foto_perfil {
+       display: none
+    }
+
+    .foto_responsive{
+        display: flex;
+        border: 2px solid #F85791;
+        border-radius: 50px;
+    }
+    .sobre_mi {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info_sobremi {
+        padding-top: 30px;
+        width: 72%;
+    }
+
+    .sobremi_barra_inferior {
+        top: 40px;
+    }
+
+    .experiencia {
+        width: 72%
+    }
+
+    .estudios_habilidades {
+        width: 72%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        gap: 30px;
+    }
+
+    .estudios ul {
+        height: 100%;
+    }
+
+    footer ul {
+        padding: 30px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .estudios, .habilidades {
+        width: 100%;
+    }
+
+    footer {
+        height: 100%;
+    }
 }
