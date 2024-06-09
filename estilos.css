@@ -17,6 +17,15 @@
          font-display: swap;
          font-style: normal;
   }
+  @font-face {
+    font-family: 'ClashDisplay-Semibold';
+    src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+         url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+         url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
 
 *{
     margin: 0;
@@ -49,19 +58,23 @@ header {
     z-index: 100;
 }
 
-header nav {
+.nav_responsive, .menu_hamburguesa {
+    display: none;
+}
+
+.nav {
     width: 52%;
     padding: 15px 0px 15px 0px;
     
 }
 
-header ul {
+header .ul_nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header ul li {
+.ul_nav li {
     width: 150px;
     height: 50px;
     display: flex;
@@ -69,7 +82,7 @@ header ul li {
     justify-content: center;
 }
 
-header nav a {
+.nav a {
     color:#D6E4EB ;
     font-family: "ClashDisplay-Regular";
     font-size: 1.2em;
@@ -82,14 +95,13 @@ header nav a {
     
 }
 
-header nav a:hover {
+.botton_nav:hover {
     border: 2px solid #F85791;
     border-radius: 15px;
 }
 
-.casita {
-    position: absolute;
-    left: 93%;
+.botton_nav:active {
+    color: #1A3BAE;
 }
 
 .logo_rosa {
@@ -109,7 +121,7 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 83px;
+    padding-top: 140px;
     justify-content: center;
     height: 90vh;
 }
@@ -422,9 +434,9 @@ header nav a:hover {
 }
 
 .estudios_negrita{
-    font-family: 'ClashDisplay-Regular';
+    font-weight: 700;
     font-size: 1.1em;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
 }
 
 /*footer*/
@@ -920,22 +932,88 @@ footer ul li div:hover {
 @media screen and (max-width: 600px) {
     
 
-    header nav {
+    .nav {
         display: none;
+    }
+    
+    header {
+        --altura_header:60px;
+        display: block;
+        height: var(--altura_header);
+    }
+
+    .nav_responsive {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        height: 100%;
+
+
+    }
+
+    .botones_menu_hamburguesa {
+        width: 60%;
+        position: absolute;
+        top: var(--altura_header);
+        height: calc(100vh - var(--altura_header));
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        left: 0px;
+        transition: all 0.5s;
+        background-color: #1A1C24;
+        border-right: 2px solid #F85791;
+        
+    }
+
+    .botones_menu_hamburguesa div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+
+    .botones_menu_hamburguesa div li {
+        list-style-type: none;
+    }
+
+    .botones_menu_hamburguesa a {
+        color:#D6E4EB ;
+        font-family: "ClashDisplay-Regular";
+        font-size: 1.2em;
+        text-decoration: none;
+        letter-spacing: 0.5px
+    }
+
+    .botones_menu_hamburguesa a:active {
+        color: #1A3BAE;
+    }
+    
+
+    .hamburguesa {
+        padding-left: 30px;
+    }
+
+    .menu_hamburguesa:checked + .botones_menu_hamburguesa {
+        height: calc(100vh - var(--altura_header)); ;
     }
 
     .yanina_carlomagno {
-        height: 50vh;
+        height: auto;
     }
 
     .yanina_carlomagno h2 {
         font-family: "ClashDisplay-Bold";
-        font-size: 5em;
+        font-size: 4em;
     }
     .yanina_carlomagno h1 {
-        font-size: 3.5em;
+        font-size: 2.5em;
         position: relative;
-        bottom: 31px;
+        bottom: 23px;
     }
 
     .flores {
@@ -967,7 +1045,7 @@ footer ul li div:hover {
 
     .info_sobremi {
         padding-top: 30px;
-        width: 72%;
+        width: 84%;
     }
 
     .sobremi_barra_inferior {
@@ -975,19 +1053,34 @@ footer ul li div:hover {
     }
 
     .experiencia {
-        width: 72%
+        width: 85%
     }
 
     .estudios_habilidades {
-        width: 72%;
+        width: 84%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 50px;
+        padding: 0px;
         gap: 30px;
     }
 
+    .estudios li, .habilidades li {
+        padding: 0px 0px 0px 5px;
+        color: #D6E4EB;
+        font-family: "Coda";
+        list-style-type: "✤";
+    }
+
+    .listas_habilidades {
+        height: auto;
+        padding: 35px 46px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
     .estudios ul {
+        padding: 35px 46px;  
         height: 100%;
     }
 
