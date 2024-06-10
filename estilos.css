@@ -42,7 +42,6 @@ main {
 body {
     background-image: url(img/textura_fondo.jpg);
     background-repeat: repeat;
-    
 }
 
 /*header*/
@@ -124,9 +123,11 @@ header .ul_nav {
     padding-top: 140px;
     justify-content: center;
     height: 90vh;
+    
 }
 
 .yanina_carlomagno h2 {
+   
     font-family: "ClashDisplay-Bold" ;
     -webkit-text-stroke: 2px #F85791;
     font-size: 12em;
@@ -138,7 +139,9 @@ header .ul_nav {
     color: #F85791;
     font-size: 10em;
     position: relative;
-    bottom: 80px
+    bottom: 80px;
+    cursor: default;
+    
 }
 
 .flor_responsive {
@@ -219,7 +222,7 @@ header .ul_nav {
     top:50px;
 }
 
-.sobre_mi {
+#sobre_mi {
     z-index: 50;
     width: 68%;
     display: flex;
@@ -363,7 +366,7 @@ header .ul_nav {
     color: #D6E4EB;
     width: 60%;
     align-self: flex-start;
-    padding-left: 20%;
+    padding-left: 19%;
     padding-top: 10px;
     text-decoration: none;
     font-family: "Coda";
@@ -1023,7 +1026,7 @@ footer ul li div:hover {
     .flor_responsive {
         display: flex;
         position: relative;
-        bottom: 36px;
+        bottom: 21px;
     }
 
     .foto_perfil {
@@ -1061,7 +1064,7 @@ footer ul li div:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0px;
+        padding-bottom: 60px;
         gap: 30px;
     }
 
@@ -1095,6 +1098,7 @@ footer ul li div:hover {
 
     .estudios, .habilidades {
         width: 100%;
+        
     }
 
     footer {
