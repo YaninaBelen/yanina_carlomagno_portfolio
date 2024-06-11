@@ -37,6 +37,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: url(img/iconos/flecha_derecha.svg);
 }
 
 body {
@@ -148,7 +149,7 @@ header .ul_nav {
     display: none;
     height: 57px ;
     width: 57px;
-    background-image: url(img/flores-18.svg);
+    background-image: url(img/iconos/flores-18.svg);
     background-position: center;
     background-repeat: no-repeat;
     animation: flor 1.5s infinite;
@@ -167,7 +168,7 @@ header .ul_nav {
 .flor_animacion_izq {
     height: 150px;
     width: 150px;
-    background-image: url(img/flores-18.svg);
+    background-image: url(img/iconos/flores-18.svg);
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -179,7 +180,7 @@ header .ul_nav {
 .flor_animacion_der {
     height: 150px;
     width: 150px;
-    background-image: url(img/flores-18.svg);
+    background-image: url(img/iconos/flores-18.svg);
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -191,7 +192,7 @@ header .ul_nav {
 .flor_animacion_form {
     height: 150px;
     width: 150px;
-    background-image: url(img/flores-18.svg);
+    background-image: url(img/iconos/flores-18.svg);
     background-position: center;
     background-repeat: no-repeat;
     padding-right: 100px;
@@ -199,16 +200,16 @@ header .ul_nav {
 }
 
 @keyframes flor {
-    24% {background-image: url(img/flores-18.svg);}
+    24% {background-image: url(img/iconos/flores-18.svg);}
 
-    25% {background-image: url(img/flores-20.svg);}
-    49% {background-image: url(img/flores-20.svg);}
+    25% {background-image: url(img/iconos/flores-20.svg);}
+    49% {background-image: url(img/iconos/flores-20.svg);}
 
-    50% {background-image: url(img/flores-19.svg)}
-    74% {background-image: url(img/flores-19.svg);}
+    50% {background-image: url(img/iconos/flores-19.svg)}
+    74% {background-image: url(img/iconos/flores-19.svg);}
 
-    75% {background-image: url(img/flores-21.svg);}
-    100% {background-image: url(img/flores-21.svg);}
+    75% {background-image: url(img/iconos/flores-21.svg);}
+    100% {background-image: url(img/iconos/flores-21.svg);}
 }
 
 /*sobre mí*/
@@ -222,7 +223,7 @@ header .ul_nav {
     top:50px;
 }
 
-#sobre_mi {
+.sobre_mi {
     z-index: 50;
     width: 68%;
     display: flex;
@@ -555,6 +556,103 @@ footer ul li div:hover {
     border-radius: 50px;
 }
 
+/*ilustraciones htmls*/
+
+.volver a {
+    height: 80px;
+    color: #D6E4EB;
+    font-family: "ClashDisplay-bold";
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding-left: 30px;
+
+}
+
+
+
+.volver {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.volver a:hover {
+    transform: scale(110%);
+    transition: 0.2s;
+}
+
+iframe {
+    padding-right: 30px;
+}
+
+.html_galeria {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: flex-start;
+    padding: 0px 30px 0px 10px;
+    width: 500px;
+}
+
+.descripcion img:hover {
+    transform: scale(110%);
+    transition: 0.2s;
+}
+
+.imagen_html {
+    border: 2px solid #F85791;
+    border-radius: 50px;
+}
+
+.html_galeria h2 {
+    color: #D6E4EB  ;
+    font-family: "ClashDisplay-bold";
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.cancion_html {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #D6E4EB;
+    font-family: "Coda";
+    font-weight: 500;
+}
+
+.cancion_html li {
+    list-style-type: none;
+    padding: 2px 0px;
+}
+
+.flecha_atras, .flecha_delante {
+    padding: 15px;
+}
+
+.flecha_atras:hover, .flecha_delante:hover {
+    transform: scale(120%);
+    transition: 0.2s;
+}
+
+.main_html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 /*identidades*/
 
