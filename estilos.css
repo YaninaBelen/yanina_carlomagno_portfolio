@@ -37,7 +37,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: url(img/iconos/flecha_derecha.svg);
 }
 
 body {
@@ -1155,6 +1154,11 @@ iframe {
 
     .experiencia {
         width: 85%
+    }
+
+    .experiencia img, .carolina_overlay, .cranch_overlay, .bennu_overlay, .electricidad_overlay , .sunset_overlay , .quereme_overlay {
+        width: 252px;
+        height: 338px;
     }
 
     .estudios_habilidades {
